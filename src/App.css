@@ -1,33 +1,53 @@
-.App {
-  text-align: center;
+#checkMarkOne{
+  opacity: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#checkMarkTwo{
+  opacity: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#finishedCheckMark{
+  opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+#checkMarkThree{
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+path {
+  stroke-dasharray: 99.47578430175781;
+  stroke-dashoffset: -99.47578430175781;
+  fill: transparent;
+}
+
+.animate {
+  animation: 1s ease forwards draw;
+  opacity:0;
+}
+
+@keyframes draw {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: -99.47578430175781;
+    fill: transparent;
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  
+  35% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  
+  60% {
+    fill: #FFFFFF;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  100% {
+    fill: #FFFFFF;
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
+
